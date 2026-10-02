@@ -1,0 +1,525 @@
+/* ==================================================
+   COLOUR GUIDE
+   Main dark blue : #0c3055
+   Secondary blue : #1a6bc4 (buttons, links, hover)
+   Light blues    : #eaf3fb and #f5f9fd
+================================================== */
+
+/* ================= BASIC SETUP ================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;   /* keeps headings visible below the sticky nav */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 25px 15px;
+
+    background-color: #6d8d7f;
+    color: #2f3e4e;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ================= PROFILE CARD (holds everything) ================= */
+
+.page {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    background-color: #77c8d4;
+    border: 1px solid #c3d8ea;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(12, 48, 85, 0.18);
+}
+
+
+/* ================= NAVIGATION BAR ================= */
+
+nav {
+    position: sticky;   /* stays visible while scrolling */
+    top: 0;
+    z-index: 100;
+
+    padding: 12px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    background-color: #0c3055;
+    border-radius: 18px 18px 0 0;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 6px 12px;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation hover: background and text colour change */
+nav ul li a:hover {
+    background-color: #f0eef3;
+    color: #0c3055;
+}
+
+
+/* ================= HOME SECTION ================= */
+
+#home {
+    padding: 40px 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    background-color: #eaf3fb;
+}
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border: 5px solid #0c3055;
+    border-radius: 50%;   /* circular photograph */
+
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Photo hover: slightly larger and border colour change */
+.profile-photo:hover {
+    transform: scale(1.05);
+    border-color:#f0eef3;
+}
+
+.introduction {
+    flex: 1;
+}
+
+.hello {
+    color: #1a6bc4;
+    font-weight: bold;
+}
+
+.introduction h1 {
+    margin: 2px 0 4px;
+
+    color: #0c3055;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.title {
+    margin-bottom: 10px;
+
+    color: #1a6bc4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.introduction p {
+    margin-bottom: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 22px;
+
+    background-color: #1a6bc4;
+    color: #ffffff;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover: colour change and moves slightly upward */
+.button:hover {
+    background-color:#f0eef3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(12, 48, 85, 0.30);
+}
+
+
+/* ================= COMMON SECTION STYLE ================= */
+
+section {
+    padding: 30px 35px 10px;
+}
+
+main {
+    display: block;
+    padding-bottom: 25px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+
+    color: #0c3055;
+    font-size: 24px;
+}
+
+/* Small decorative line below every section heading */
+.section-heading::after {
+    content: "";
+    display: block;
+
+    width: 55px;
+    height: 4px;
+    margin-top: 6px;
+
+    background-color: #1a6bc4;
+    border-radius: 4px;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+.about-box {
+    padding: 22px 25px;
+
+    background-color: #f5f9fd;
+    border: 1px solid #cfe0ef;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(12, 48, 85, 0.08);
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-box p {
+    margin-bottom: 10px;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+.about-box:hover {
+    background-color:#f0eef3;
+    transform: translateY(-4px);
+}
+
+
+/* ================= EDUCATION SECTION ================= */
+
+/* Cards arranged vertically */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.education-box {
+    padding: 18px 22px;
+
+    background-color: #f5f9fd;
+    border: 1px solid #cfe0ef;
+    border-left: 6px solid #0c3055;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(12, 48, 85, 0.08);
+
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.education-box h3 {
+    color: #0c3055;
+    font-size: 19px;
+}
+
+.education-box h4 {
+    margin-bottom: 6px;
+
+    color: #1a6bc4;
+    font-size: 16px;
+}
+
+.education-box strong {
+    color: #0c3055;
+}
+
+.education-box:hover {
+    background-color:#f0eef3;
+    border-left-color: #1a6bc4;
+    transform: translateX(5px);
+}
+
+
+/* ================= SKILLS SECTION ================= */
+
+/* Three columns on desktop */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.skill-box {
+    padding: 18px;
+
+    background-color: #f5f9fd;
+    border: 1px solid #cfe0ef;
+    border-top: 4px solid #0c3055;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(12, 48, 85, 0.08);
+
+    text-align: center;
+    font-size: 15px;
+
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-box h3 {
+    margin-bottom: 6px;
+    color: #0c3055;
+}
+
+.skill-box:hover {
+    background-color: #f0eef3;
+    border-top-color: #1a6bc4;
+    transform: translateY(-5px);
+}
+
+
+/* ================= HOBBIES SECTION ================= */
+
+/* Four equal-sized cards */
+.hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.hobby-box {
+    padding: 18px 12px;
+
+    background-color: #f5f9fd;
+    border: 1px solid #cfe0ef;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(12, 48, 85, 0.08);
+
+    text-align: center;
+    font-size: 15px;
+
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.hobby-box span {
+    display: block;
+    font-size: 32px;
+}
+
+.hobby-box h3 {
+    margin: 4px 0;
+
+    color: #0c3055;
+    font-size: 16px;
+}
+
+.hobby-box:hover {
+    background-color: #f0eef3;
+    border-color: #37404a;
+    transform: translateY(-5px);
+}
+
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-box {
+    padding: 8px 25px;
+
+    background-color: #f5f9fd;
+    border: 1px solid #cfe0ef;
+    border-radius: 12px;
+}
+
+.contact-box p {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #dbe8f4;
+
+    overflow-wrap: anywhere;   /* long URLs wrap safely */
+}
+
+.contact-box p:last-child {
+    border-bottom: none;
+}
+
+.contact-box strong {
+    display: inline-block;
+    min-width: 85px;
+
+    color: #0c3055;
+}
+
+.contact-box a {
+    color: #1a6bc4;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* Contact link hover: colour change and underline */
+.contact-box a:hover {
+    color:#908d93;
+    text-decoration: underline;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 16px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 25px;
+
+    background-color: #0c3055;
+    color: #ffffff;
+    border-radius: 0 0 18px 18px;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+footer a {
+    color: #9fd0f5;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color:#f0eef3;
+    text-decoration: underline;
+}
+
+
+/* ================= KEYBOARD FOCUS ================= */
+
+a:focus-visible {
+    outline: 3px solid #9fd0f5;
+    outline-offset: 3px;
+}
+
+
+/* ================= TABLET (up to 850px) ================= */
+
+@media screen and (max-width: 850px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    /* Home section becomes vertical */
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Skills: two columns */
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hobbies-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================= MOBILE (up to 550px) ================= */
+
+@media screen and (max-width: 550px) {
+
+    body {
+        padding: 10px 8px;
+    }
+
+    nav {
+        padding: 10px 12px;
+    }
+
+    nav ul li a {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    #home {
+        padding: 30px 18px;
+    }
+
+    .profile-photo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .introduction h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 25px 18px 8px;
+    }
+
+    /* Skills and hobbies: one column */
+    .skills-container,
+    .hobbies-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-box:hover {
+        transform: translateY(-4px);
+    }
+
+    .contact-box strong {
+        display: block;
+        min-width: 0;
+    }
+}
